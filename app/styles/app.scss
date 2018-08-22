@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Avenir-plain';
+  src: url('/assets/fonts/Avenir.ttc') format('truetype')
+}
+
+body {
+  margin: 0;
+  font-family: 'Avenir-plain', Verdana, Geneva, sans-serif;
+  background-color: #F5F5F5;
+}
+
+@import "ember-cli-bootstrap-4/bootstrap";
+@import "pages/users";
