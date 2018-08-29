@@ -1,0 +1,41 @@
+{{#blog-header title=title}}
+	
+{{/blog-header}}
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="content-container">
+			<div class="row justify-content-center">
+		    <div class="text-center col-md-11 align-self-center" role="alert">
+					{{#link-to 'users' classNames='btn btn-info'}}
+		        See All Tutors
+		      {{/link-to}}
+				</div>
+		  </div>
+		  <br>
+			{{#each filteredPosts as |post|}}
+				<div class="div-clickable">
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 float-left">
+          	<div class="card bordershadow">
+	          	<div class="card-img-box">
+								<img class="card-img" src="assets/images/tutors/{{post.user.id}}.jpg" alt="Card image cap">
+							</div>	
+							<div class="card-body clearfix">
+							  <h5 class="card-title">
+							  	{{user.name}}
+							  </h5>
+							  <div class="card-text">
+									<p><span class="text-label">User:</span> {{post.user.name}}</p>
+									<p><span class="text-label">Title:</span> {{post.title}}</p>
+									<p><span class="text-label">Body:</span> {{post.body}}</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</div>
+
+{{outlet}}

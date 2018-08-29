@@ -2,6 +2,7 @@ import DS from 'ember-data';
 import EmberObject, { computed } from '@ember/object';
 
 export default DS.Model.extend({
+	post: DS.hasMany('post'),
 	name: DS.attr('string'),
 	email: DS.attr('string'),
 	phone: DS.attr('string'),

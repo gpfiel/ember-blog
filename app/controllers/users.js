@@ -14,9 +14,9 @@ export default Controller.extend({
 
   filteredUsers: computed('filter', function() {
     const filterTerm = this.get('filter');
-    var model = this.get('model');
+    var users = this.get('users');
 
-    var filtered = model.filter( function(user) {
+    var filtered = users.filter( function(user) {
         return user.get('name').toLowerCase().indexOf(filterTerm) !== -1 || user.get('subject').toLowerCase().indexOf(filterTerm) !== -1;
     });
 
