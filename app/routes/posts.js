@@ -3,7 +3,7 @@ import { inject as service } from '@ember/service';
 
 export default Route.extend({
 	loadingData: service('loading-data'),
-	model(params) {
+	model() {
 		this.loadingData.activate()
 		return this.store.findAll('post');
 	},

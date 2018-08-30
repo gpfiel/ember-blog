@@ -3,10 +3,13 @@ import { setupTest } from 'ember-qunit';
 
 module('Unit | Adapter | post', function(hooks) {
   setupTest(hooks);
-
-  // Replace this with your real tests.
+  
   test('it exists', function(assert) {
-    let adapter = this.owner.lookup('adapter:post');
-    assert.ok(adapter);
+		let adapter = this.owner.lookup('adapter:post');
+		assert.ok(adapter);
+  });
+  test('Adapter named correctly', function(assert) {
+		let adapter = this.owner.lookup('adapter:post');
+		assert.equal(adapter.pathForType(), 'posts')
   });
 });
